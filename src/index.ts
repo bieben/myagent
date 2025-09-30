@@ -1,3 +1,10 @@
-import { hello } from "./utils";
+import ChatOpenAI from "./ChatOpenAI"
 
-hello();
+async function main(){
+    const llm = new ChatOpenAI("gpt-4o-mini")
+    const { content, toolCalls } = await llm.chat("Hello")
+    console.log(content);
+    console.log(toolCalls);
+}
+
+main()

@@ -1,5 +1,5 @@
 {
-  "name": "ts-node-esm-template",
+  "name": "myagent",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -23,5 +23,13 @@
     "onlyBuiltDependencies": [
       "esbuild"
     ]
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.2",
+    "chalk": "^5.6.2",
+    "dotenv": "^17.2.2",
+    "https-proxy-agent": "^7.0.6",
+    "openai": "^5.23.1",
+    "undici": "^6.21.3"
   }
 }
