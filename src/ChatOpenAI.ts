@@ -145,7 +145,11 @@ export default class ChatOpenAI {
     private getToolsDefinition() {
         return this.tools.map((tool) => ({
             type: "function" as const, // Literal type required by OpenAI API
-            function: tool,           // MCP tool definition
+            function: {
+                name: tool.name,
+                description: tool.description,
+                parameters: tool.inputSchema,
+            }
         }))
     }
 }
